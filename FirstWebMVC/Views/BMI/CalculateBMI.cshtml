@@ -1,0 +1,18 @@
+@model FirstWebMVC.Models.BMIModel
+
+<form asp-action="CalculateBMI" method="post">
+    <div>
+        <label for="Height">Chiều cao (m):</label>
+        <input type="text" id="Height" name="Height" />
+    </div>
+    <div>
+        <label for="Weight">Cân nặng (kg):</label>
+        <input type="text" id="Weight" name="Weight" />
+    </div>
+    <button type="submit">Tính BMI</button>
+</form>
+
+@if (ViewBag.BMI != null)
+{
+    <p>Chỉ số BMI của bạn là: @ViewBag.BMI</p>
+}

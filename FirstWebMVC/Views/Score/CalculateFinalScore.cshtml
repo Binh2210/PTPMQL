@@ -1,0 +1,22 @@
+@model FirstWebMVC.Models.ScoreModel
+
+<form asp-action="CalculateFinalScore" method="post">
+    <div>
+        <label for="ScoreA">Điểm A:</label>
+        <input type="text" id="ScoreA" name="ScoreA" />
+    </div>
+    <div>
+        <label for="ScoreB">Điểm B:</label>
+        <input type="text" id="ScoreB" name="ScoreB" />
+    </div>
+    <div>
+        <label for="ScoreC">Điểm C:</label>
+        <input type="text" id="ScoreC" name="ScoreC" />
+    </div>
+    <button type="submit">Tính điểm</button>
+</form>
+
+@if (ViewBag.FinalScore != null)
+{
+    <p>Điểm cuối cùng của bạn là: @ViewBag.FinalScore</p>
+}
