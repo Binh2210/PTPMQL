@@ -4,7 +4,7 @@ namespace FirstWebMVC.Models
 {
     public class Employee : Person
     {
-        public string EmployeeId { get; set; }
+        public  string EmployeeId { get; set; }
         public required int Age { get; set; }
     }
 }
